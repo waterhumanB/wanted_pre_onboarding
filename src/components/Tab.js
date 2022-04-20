@@ -7,47 +7,53 @@ const Tab = () => {
   return (
     <section>
       Tab
-      <section style={{ display: "flex" }}>
-        {" "}
-        <TabBox
+      <section style={{ position: "relative", display: "flex" }}>
+        <Box
           style={{
-            color: onFocusTabBox === 0 ? "green" : "lightgray",
-            borderBottom:
-              onFocusTabBox === 0 ? "1px solid green" : "1px solid lightgray",
-            transition: "linear .4s",
+            color: onFocusTabBox === 0 ? "green" : "gray",
+            transition: "linear .5s",
           }}
           onClick={() => {
             setOnFocusTabBox(0);
           }}
         >
           Vue
-        </TabBox>
-        <TabBox
+        </Box>
+        <Box
           style={{
-            color: onFocusTabBox === 1 ? "blue" : "lightgray",
-            borderBottom:
-              onFocusTabBox === 1 ? "1px solid blue" : "1px solid lightgray",
-            transition: "linear .4s",
+            color: onFocusTabBox === 1 ? "blue" : "gray",
+            transition: "linear .5s",
           }}
           onClick={() => {
             setOnFocusTabBox(1);
           }}
         >
           React
-        </TabBox>
-        <TabBox
+        </Box>
+        <Box
           style={{
-            color: onFocusTabBox === 2 ? "red" : "lightgray",
-            borderBottom:
-              onFocusTabBox === 2 ? "1px solid red" : "1px solid lightgray",
-            transition: "linear .4s",
+            color: onFocusTabBox === 2 ? "red" : "gray",
+            transition: "linear .5s",
           }}
           onClick={() => {
             setOnFocusTabBox(2);
           }}
         >
           Angular
-        </TabBox>
+        </Box>
+        <TabBox
+          style={{
+            borderBottom:
+              (onFocusTabBox === 0 && "5px solid green") ||
+              (onFocusTabBox === 1 && "5px solid blue") ||
+              (onFocusTabBox === 2 && "5px solid red"),
+            marginLeft:
+              (onFocusTabBox === 0 && "0px") ||
+              (onFocusTabBox === 1 && "150px") ||
+              (onFocusTabBox === 2 && "300px"),
+            transition: "linear .5s",
+          }}
+        ></TabBox>
       </section>
     </section>
   );
@@ -55,7 +61,18 @@ const Tab = () => {
 
 export default Tab;
 
-const TabBox = styled.div`
+const Box = styled.div`
+  text-align: center;
+  font-weight: bold;
   width: 150px;
   height: 100px;
+  border-bottom: 5px solid gray;
+  opacity: 0.5;
+`;
+const TabBox = styled.div`
+  font-weight: bold;
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  z-index: -1;
 `;
