@@ -22,14 +22,14 @@ const Toggle = () => {
         <ToggleBox
           style={{
             marginLeft: onClickBox === true ? "155px" : "5px",
-            transition: "linear .5s",
+            transition: "linear .3s",
           }}
         ></ToggleBox>
         <Box
           style={{
             backgroundColor: "gray",
             color: onClickBox === true ? "black" : "white",
-            transition: "linear .5s",
+            transition: "linear .3s",
           }}
           onClick={() => {
             setOnClickBox(true);

@@ -11,7 +11,7 @@ const Tab = () => {
         <Box
           style={{
             color: onFocusTabBox === 0 ? "green" : "gray",
-            transition: "linear .5s",
+            transition: "linear .3s",
           }}
           onClick={() => {
             setOnFocusTabBox(0);
@@ -22,7 +22,7 @@ const Tab = () => {
         <Box
           style={{
             color: onFocusTabBox === 1 ? "blue" : "gray",
-            transition: "linear .5s",
+            transition: "linear .3s",
           }}
           onClick={() => {
             setOnFocusTabBox(1);
@@ -33,7 +33,7 @@ const Tab = () => {
         <Box
           style={{
             color: onFocusTabBox === 2 ? "red" : "gray",
-            transition: "linear .5s",
+            transition: "linear .3s",
           }}
           onClick={() => {
             setOnFocusTabBox(2);
@@ -51,7 +51,7 @@ const Tab = () => {
               (onFocusTabBox === 0 && "0px") ||
               (onFocusTabBox === 1 && "150px") ||
               (onFocusTabBox === 2 && "300px"),
-            transition: "linear .5s",
+            transition: "linear .3s",
           }}
         ></TabBox>
       </section>
@@ -65,14 +65,14 @@ const Box = styled.div`
   text-align: center;
   font-weight: bold;
   width: 150px;
-  height: 100px;
-  border-bottom: 5px solid gray;
+  height: 30px;
+  border-bottom: 5px solid lightgray;
   opacity: 0.5;
 `;
 const TabBox = styled.div`
   font-weight: bold;
   width: 150px;
-  height: 100px;
+  height: 30px;
   position: absolute;
   z-index: -1;
 `;
