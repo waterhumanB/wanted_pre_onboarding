@@ -7,19 +7,19 @@ import Dropdown from "./components/Dropdown";
 function App() {
   return (
     <section>
-      <section>
+      <section style={{ marginBottom: "70px" }}>
         <Toggle></Toggle>
       </section>
-      <section>
+      <section style={{ marginBottom: "70px" }}>
         <Tab></Tab>
       </section>
-      <section>
+      <section style={{ marginBottom: "70px" }}>
         <Slider></Slider>
       </section>
-      <section>
+      <section style={{ marginBottom: "70px" }}>
         <Input></Input>
       </section>
-      <section>
+      <section style={{ marginBottom: "70px" }}>
         <Dropdown></Dropdown>
       </section>
     </section>

@@ -11,16 +11,21 @@ const Dropdown = () => {
     setInputValue(e.target.value);
     console.log(inputValue);
   };
+
+  const dropdownHandler = (e) => {
+    setToggle((e) => {
+      return !e;
+    });
+    setSelectValue("");
+  };
+
   return (
     <section>
       <section>Dropdown</section>
       <div style={{ position: "relative" }}>
         <input defaultValue={selectValue}></input>
         <img
-          onClick={() => {
-            setToggle(true);
-            setSelectValue("");
-          }}
+          onClick={dropdownHandler}
           style={{
             width: "10px",
             position: "absolute",
