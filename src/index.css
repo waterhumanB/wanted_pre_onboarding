@@ -1,5 +1,9 @@
 body {
-  margin: 0;
+  width: 500px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
